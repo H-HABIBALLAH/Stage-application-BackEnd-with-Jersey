@@ -6,13 +6,12 @@ public class Fichier implements Serializable {
     private Long id;
     private String type;
     private String title;
-    private String link;
+    private byte[] data;
     private Etudiant etudiant;
 
-    public Fichier(String type, String title, String link, Etudiant etudiant) {
+    public Fichier(String type, String title, Etudiant etudiant) {
         this.type = type;
         this.title = title;
-        this.link = link;
         this.etudiant = etudiant;
     }
 
@@ -36,8 +35,12 @@ public class Fichier implements Serializable {
         this.title = title;
     }
 
-    public String getLink() {
-        return link;
+    public byte[] getData() {
+        return data;
+    }
+
+    public void setData(byte[] data) {
+        this.data = data;
     }
 
     public Etudiant getEtudiant() {

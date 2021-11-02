@@ -22,4 +22,60 @@ public class Etudiant extends Utilisateur implements Serializable { ;
         this.competences = competences;
         this.fichiers = fichiers;
     }
+
+    public String getNoEtudiant() {
+        return noEtudiant;
+    }
+
+    public void setNoEtudiant(String noEtudiant) {
+        this.noEtudiant = noEtudiant;
+    }
+
+    public Boolean getInscrit() {
+        return inscrit;
+    }
+
+    public void setInscrit(Boolean inscrit) {
+        this.inscrit = inscrit;
+    }
+
+    public String getFormation() {
+        return formation;
+    }
+
+    public void setFormation(String formation) {
+        this.formation = formation;
+    }
+
+    public String getLinkedInLink() {
+        return linkedInLink;
+    }
+
+    public void setLinkedInLink(String linkedInLink) {
+        this.linkedInLink = linkedInLink;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getCompetences() {
+        return competences;
+    }
+
+    public void setCompetences(String competences) {
+        this.competences = competences;
+    }
+
+    public List<Fichier> getFichiers() {
+        return fichiers;
+    }
+
+    public void setFichiers(List<Fichier> fichiers) {
+        this.fichiers = fichiers;
+    }
 }

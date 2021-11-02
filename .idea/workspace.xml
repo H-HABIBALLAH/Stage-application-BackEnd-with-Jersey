@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96b692aa-1f45-44c8-ba98-6f033fb37bcc" name="Changes" comment="" />
+    <list default="true" id="96b692aa-1f45-44c8-ba98-6f033fb37bcc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/administrateur/AdministrateurDaomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/administrateur/AdministrateurDaomImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/etudiant/etudiantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fichier/fichierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/offre/offreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Offre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Offre.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +33,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="20JtRzvz9UuAIkAu3Yu4QmA4W4O" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -32,10 +53,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="project.structure.side.proportion" value="0.3295082" />
+    <property name="settings.editor.selected.configurable" value="profiler.jvm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -52,11 +73,25 @@
       <updated>1635774519805</updated>
       <workItem from="1635774521410" duration="1703000" />
       <workItem from="1635776602163" duration="15124000" />
-      <workItem from="1635833891673" duration="5632000" />
+      <workItem from="1635833891673" duration="6303000" />
+      <workItem from="1635843581423" duration="2669000" />
+      <workItem from="1635864425930" duration="12256000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -35,7 +35,6 @@ public class AdministrateurDaomImpl implements AdministrateurDao {
     public Administrateur getAdminById(Long id) {
         Connection connection;
         Administrateur admin = null;
-        Statement statement;
         ResultSet resultat;
         PreparedStatement preparedStatement;
 

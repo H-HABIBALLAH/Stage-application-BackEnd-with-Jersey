@@ -9,17 +9,15 @@ public class Offre implements Serializable {
     private Boolean confirme;
     private String contenu;
     private String competences;
-    private Entreprise entreprise;
+    private String entrepriseName;
     private Administrateur admin;
 
-    public Offre(Long id, String titre, Boolean confirme, String contenu, String competences, Entreprise entreprise, Administrateur admin) {
-        Id = id;
+    public Offre(String titre, Boolean confirme, String contenu, String competences, String entrepriseName) {
         this.titre = titre;
         this.confirme = confirme;
         this.contenu = contenu;
         this.competences = competences;
-        this.entreprise = entreprise;
-        this.admin = admin;
+        this.entrepriseName = entrepriseName;
     }
 
     public Long getId() {
@@ -58,12 +56,12 @@ public class Offre implements Serializable {
         this.competences = competences;
     }
 
-    public Entreprise getEntreprise() {
-        return entreprise;
+    public String getEntrepriseName() {
+        return entrepriseName;
     }
 
-    public void setEntreprise(Entreprise entreprise) {
-        this.entreprise = entreprise;
+    public void setEntreprise(String entrepriseName) {
+        this.entrepriseName = entrepriseName;
     }
 
     public Administrateur getAdmin() {
