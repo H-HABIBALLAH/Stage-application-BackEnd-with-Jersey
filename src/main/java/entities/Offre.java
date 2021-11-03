@@ -4,19 +4,31 @@ package entities;
 import java.io.Serializable;
 
 public class Offre implements Serializable {
-    private Long Id;
-    private String titre;
-    private Boolean confirme;
-    private String contenu;
-    private String competences;
-    private String entrepriseName;
-    private Administrateur admin;
+     private Long Id;
+     private String titre;
+     private Boolean confirme;
+     private String contenu;
+     private String competences;
+     private String entrepriseName;
+     private Administrateur admin;
+
+    public Offre() {
+        this.titre = null;
+        this.confirme = null;
+        this.contenu = null;
+        this.competences = null;
+        this.entrepriseName = null;
+    }
 
     public Offre(String titre, Boolean confirme, String contenu, String competences, String entrepriseName) {
         this.titre = titre;
         this.confirme = confirme;
         this.contenu = contenu;
         this.competences = competences;
+        this.entrepriseName = entrepriseName;
+    }
+
+    public void setEntrepriseName(String entrepriseName) {
         this.entrepriseName = entrepriseName;
     }
 

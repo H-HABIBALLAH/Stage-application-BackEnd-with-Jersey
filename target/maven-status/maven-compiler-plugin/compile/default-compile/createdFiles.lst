@@ -8,6 +8,7 @@ entities\Fichier.class
 dao\fichier\FichierDaoImpl.class
 service\EtudiantService.class
 entities\Administrateur.class
+service\MyJaxBean.class
 dao\DBConnection.class
 dao\offre\OffreDao.class
 dao\offre\OffreDaoImpl.class
