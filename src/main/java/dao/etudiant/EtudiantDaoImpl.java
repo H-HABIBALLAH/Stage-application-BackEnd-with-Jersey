@@ -23,7 +23,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
             String formation = result.getString("formation");
-            String linkedInLink = result.getString("linkedInLink");
+            String linkedInLink = result.getString("linked_in_Link");
             String description = result.getString("description");
             String competences = result.getString("competences");
             Etudiant student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,null);
@@ -44,7 +44,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
             String formation = result.getString("formation");
-            String linkedInLink = result.getString("linkedInLink");
+            String linkedInLink = result.getString("linked_In_Link");
             String description = result.getString("description");
             String competences = result.getString("competences");
             student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,null);
@@ -65,7 +65,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
             String formation = result.getString("formation");
-            String linkedInLink = result.getString("linkedInLink");
+            String linkedInLink = result.getString("linked_In_Link");
             String description = result.getString("description");
             String studentCompetences = result.getString("competences");
             student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,studentCompetences,null);
