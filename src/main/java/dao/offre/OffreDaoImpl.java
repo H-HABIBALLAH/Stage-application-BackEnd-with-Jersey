@@ -67,15 +67,21 @@ public class OffreDaoImpl implements OffreDao{
         return gson.toJson(offresList);
     }
 
-    public void save(Offre offre) throws SQLException {
-        PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO offre (competences,confirme,contenu,titre,entrepriseName) VALUES (?,?,?,?,?)");
+    public void save(Offre offre){
+        try {
+            PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO offre (competences,confirme,contenu,titre,entrepriseName) VALUES (?,?,?,?,?)");
 
-        preparedStatement.setString(1,offre.getCompetences());
-        preparedStatement.setBoolean(2,offre.getConfirme());
-        preparedStatement.setString(3,offre.getContenu());
-        preparedStatement.setString(4,offre.getTitre());
-        preparedStatement.setString(5,offre.getEntrepriseName());
+            preparedStatement.setString(1, offre.getCompetences());
+            if(offre.getConfirme() == null) offre.setConfirme(false);
+            preparedStatement.setBoolean(2, offre.getConfirme());
+            preparedStatement.setString(3, offre.getContenu());
+            preparedStatement.setString(4, offre.getTitre());
+            preparedStatement.setString(5, offre.getEntrepriseName());
 
-        preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 }

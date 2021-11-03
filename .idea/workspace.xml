@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96b692aa-1f45-44c8-ba98-6f033fb37bcc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/EtudiantService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/OffreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/administrateur/AdministrateurDaomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/administrateur/AdministrateurDaomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/etudiant/etudiantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fichier/fichierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/offre/offreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Offre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Offre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DBConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DBConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/administrateur/AdministrateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/administrateur/AdministrateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/administrateur/AdministrateurDaomImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/administrateur/AdministrateurDaomImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/etudiant/etudiantDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/etudiant/etudiantDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/fichier/fichierDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/fichier/fichierDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/offre/offreDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/offre/offreDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Administrateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Administrateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Competence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Entreprise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Entreprise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Etudiant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Etudiant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Fichier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Fichier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Offre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Offre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Utilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Utilisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +82,8 @@
       <workItem from="1635776602163" duration="15124000" />
       <workItem from="1635833891673" duration="6303000" />
       <workItem from="1635843581423" duration="2669000" />
-      <workItem from="1635864425930" duration="12256000" />
+      <workItem from="1635864425930" duration="17935000" />
+      <workItem from="1635920960090" duration="2842000" />
     </task>
     <servers />
   </component>
