@@ -26,7 +26,9 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String linkedInLink = result.getString("linked_in_Link");
             String description = result.getString("description");
             String competences = result.getString("competences");
-            Etudiant student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,null);
+            byte[] cv = result.getBytes("cv");
+            byte[] lm = result.getBytes("lm");
+            Etudiant student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
             studentsList.add(student);
         }
 
@@ -47,9 +49,10 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String linkedInLink = result.getString("linked_In_Link");
             String description = result.getString("description");
             String competences = result.getString("competences");
-            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,null);
+            byte[] cv = result.getBytes("cv");
+            byte[] lm = result.getBytes("lm");
+            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
         }
-
         return gson.toJson(student);
     }
 
@@ -68,7 +71,9 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String linkedInLink = result.getString("linked_In_Link");
             String description = result.getString("description");
             String studentCompetences = result.getString("competences");
-            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,studentCompetences,null);
+            byte[] cv = result.getBytes("cv");
+            byte[] lm = result.getBytes("lm");
+            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,studentCompetences,cv,lm);
             studentList.add(student);
         }
 
@@ -76,7 +81,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
     }
 
     public void save(Etudiant etudiant) throws SQLException {
-        PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO etudiant (nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,fichier) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+        PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO etudiant (nom,prenom,mail,password,no_etudiant,inscrit,formation,linked_In_link,description,competences,cv,lm) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 
         preparedStatement.setString(1,etudiant.getNom());
         preparedStatement.setString(2,etudiant.getPrenom());
@@ -88,7 +93,8 @@ public class EtudiantDaoImpl implements EtudiantDao{
         preparedStatement.setString(8,etudiant.getLinkedInLink());
         preparedStatement.setString(9,etudiant.getDescription());
         preparedStatement.setString(10,etudiant.getCompetences());
-        preparedStatement.setString(11,null);
+        preparedStatement.setBytes(11, etudiant.getCv());
+        preparedStatement.setBytes(12, etudiant.getLm());
 
         preparedStatement.executeUpdate();
     }

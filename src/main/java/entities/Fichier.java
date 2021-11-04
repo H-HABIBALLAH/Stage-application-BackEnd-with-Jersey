@@ -7,12 +7,15 @@ public class Fichier implements Serializable {
     private String type;
     private String title;
     private byte[] data;
-    private Etudiant etudiant;
+//    private Etudiant etudiant;
+
+    public Fichier() {
+    }
 
     public Fichier(String type, String title, Etudiant etudiant) {
         this.type = type;
         this.title = title;
-        this.etudiant = etudiant;
+//        this.etudiant = etudiant;
     }
 
     public Long getId() {
@@ -43,11 +46,11 @@ public class Fichier implements Serializable {
         this.data = data;
     }
 
-    public Etudiant getEtudiant() {
-        return etudiant;
-    }
-
-    public void setEtudiant(Etudiant etudiant) {
-        this.etudiant = etudiant;
-    }
+//    public Etudiant getEtudiant() {
+//        return etudiant;
+//    }
+//
+//    public void setEtudiant(Etudiant etudiant) {
+//        this.etudiant = etudiant;
+//    }
 }

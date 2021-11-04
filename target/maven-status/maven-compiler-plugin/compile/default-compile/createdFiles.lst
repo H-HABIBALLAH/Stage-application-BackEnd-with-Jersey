@@ -2,6 +2,8 @@ dao\etudiant\EtudiantDao.class
 dao\fichier\FichierDao.class
 dao\administrateur\AdministrateurDaomImpl.class
 dao\etudiant\EtudiantDaoImpl.class
+service\FileService.class
+dao\fileTest\fileTestDao.class
 entities\Entreprise.class
 entities\Offre.class
 entities\Fichier.class
@@ -10,8 +12,10 @@ service\EtudiantService.class
 entities\Administrateur.class
 dao\DBConnection.class
 dao\offre\OffreDao.class
+service\FiletTestService.class
 dao\offre\OffreDaoImpl.class
 service\OffreService.class
 entities\Etudiant.class
 entities\Utilisateur.class
+entities\FileTest.class
 dao\administrateur\AdministrateurDao.class

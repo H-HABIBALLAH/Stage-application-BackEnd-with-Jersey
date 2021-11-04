@@ -6,13 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="96b692aa-1f45-44c8-ba98-6f033fb37bcc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/EtudiantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/etudiant/EtudiantDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/etudiant/EtudiantDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/fichier/FichierDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/fichier/FichierDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Etudiant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Etudiant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Fichier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Fichier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/EtudiantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/MyJaxBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/OffreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/OffreService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,6 +52,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -73,7 +83,10 @@
       <workItem from="1635843581423" duration="2669000" />
       <workItem from="1635864425930" duration="17935000" />
       <workItem from="1635920960090" duration="10695000" />
-      <workItem from="1635947416882" duration="4313000" />
+      <workItem from="1635947416882" duration="12394000" />
+      <workItem from="1636007353823" duration="852000" />
+      <workItem from="1636008956482" duration="8029000" />
+      <workItem from="1636032282385" duration="20935000" />
     </task>
     <servers />
   </component>
@@ -91,5 +104,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

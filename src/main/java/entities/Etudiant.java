@@ -10,9 +10,22 @@ public class Etudiant extends Utilisateur implements Serializable { ;
     private String linkedInLink;
     private String description;
     private String competences;
-    private List<Fichier> fichiers;
+    private byte[] cv;
+    private byte[] lm;
 
-    public Etudiant(String nom, String prenom, String mail, String password, String noEtudiant, Boolean inscrit, String formation, String linkedInLink, String description, String competences, List<Fichier> fichiers) {
+    public Etudiant() {
+        super(null, null, null, null);
+        this.noEtudiant = null;
+        this.inscrit = null;
+        this.formation = null;
+        this.linkedInLink = null;
+        this.description = null;
+        this.competences = null;
+        this.cv = null;
+        this.lm = null;
+    }
+
+    public Etudiant(String nom, String prenom, String mail, String password, String noEtudiant, Boolean inscrit, String formation, String linkedInLink, String description, String competences, byte[] cv, byte[] lm) {
         super(nom, prenom, mail, password);
         this.noEtudiant = noEtudiant;
         this.inscrit = inscrit;
@@ -20,7 +33,8 @@ public class Etudiant extends Utilisateur implements Serializable { ;
         this.linkedInLink = linkedInLink;
         this.description = description;
         this.competences = competences;
-        this.fichiers = fichiers;
+        this.cv = cv;
+        this.lm = lm;
     }
 
     public String getNoEtudiant() {
@@ -71,11 +85,19 @@ public class Etudiant extends Utilisateur implements Serializable { ;
         this.competences = competences;
     }
 
-    public List<Fichier> getFichiers() {
-        return fichiers;
+    public byte[] getCv() {
+        return cv;
     }
 
-    public void setFichiers(List<Fichier> fichiers) {
-        this.fichiers = fichiers;
+    public void setCv(byte[] cv) {
+        this.cv = cv;
+    }
+
+    public byte[] getLm() {
+        return lm;
+    }
+
+    public void setLm(byte[] lm) {
+        this.lm = lm;
     }
 }
