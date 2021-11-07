@@ -15,4 +15,5 @@ public interface OffreDao {
 
     public void save(Offre offre) throws SQLException;
 
+    public String edit_offre_confirm(Long id) throws SQLException;
 }

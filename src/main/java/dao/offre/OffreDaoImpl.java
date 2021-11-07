@@ -84,4 +84,11 @@ public class OffreDaoImpl implements OffreDao{
             e.printStackTrace();
         }
     }
+
+    public String edit_offre_confirm(Long id) throws SQLException {
+        PreparedStatement preparedStatement = conn.prepareStatement("UPDATE offre SET confirme = 1 WHERE id = ? ");
+        preparedStatement.setLong(1,id);
+        preparedStatement.executeUpdate();
+        return this.getById(id);
+    }
 }

@@ -8,16 +8,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/etudiant/EtudiantDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/offre/OffreDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Etudiant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Fichier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/EtudiantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/EtudiantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/OffreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/OffreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/etudiant/EtudiantDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/etudiant/EtudiantDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/fichier/FichierDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/fichier/FichierDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/offre/OffreDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/offre/OffreDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/offre/offreDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/offre/offreDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entities/Etudiant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Etudiant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Fichier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Fichier.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/EtudiantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/OffreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/OffreService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -29,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +87,13 @@
       <workItem from="1635947416882" duration="12394000" />
       <workItem from="1636007353823" duration="852000" />
       <workItem from="1636008956482" duration="8029000" />
-      <workItem from="1636032282385" duration="20935000" />
+      <workItem from="1636032282385" duration="21791000" />
+      <workItem from="1636096185593" duration="1776000" />
+      <workItem from="1636210006534" duration="6148000" />
+      <workItem from="1636238552531" duration="4364000" />
+      <workItem from="1636270715619" duration="10095000" />
+      <workItem from="1636300370457" duration="6272000" />
+      <workItem from="1636318260289" duration="601000" />
     </task>
     <servers />
   </component>

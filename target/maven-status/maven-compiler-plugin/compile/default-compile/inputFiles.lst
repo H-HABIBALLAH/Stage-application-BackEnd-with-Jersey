@@ -1,8 +1,10 @@
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\dao\administrateur\AdministrateurDao.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\FileTest.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\dao\etudiant\EtudiantDao.java
+C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\util\EmailSender.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\dao\administrateur\AdministrateurDaomImpl.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\Entreprise.java
+C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\service\FileService.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\Utilisateur.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\Fichier.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\Offre.java
@@ -13,6 +15,7 @@ C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\dao\DBConnection
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\service\EtudiantService.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\dao\etudiant\EtudiantDaoImpl.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\Administrateur.java
+C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\service\NotifyingService.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\service\FiletTestService.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\dao\fichier\FichierDao.java
 C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java\entities\Etudiant.java

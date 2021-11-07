@@ -3,7 +3,12 @@ package entities;
 import java.io.Serializable;
 import java.util.List;
 
-public class Etudiant extends Utilisateur implements Serializable { ;
+public class Etudiant implements Serializable {
+    private Long id;
+    private String nom;
+    private String prenom;
+    private String mail;
+    private String password;
     private String noEtudiant;
     private Boolean inscrit;
     private String formation;
@@ -13,8 +18,14 @@ public class Etudiant extends Utilisateur implements Serializable { ;
     private byte[] cv;
     private byte[] lm;
 
+
+
     public Etudiant() {
-        super(null, null, null, null);
+        this.id = null;
+        this.nom = null;
+        this.prenom = null;
+        this.mail = null;
+        this.password = null;
         this.noEtudiant = null;
         this.inscrit = null;
         this.formation = null;
@@ -26,7 +37,10 @@ public class Etudiant extends Utilisateur implements Serializable { ;
     }
 
     public Etudiant(String nom, String prenom, String mail, String password, String noEtudiant, Boolean inscrit, String formation, String linkedInLink, String description, String competences, byte[] cv, byte[] lm) {
-        super(nom, prenom, mail, password);
+        this.nom = nom;
+        this.prenom = prenom;
+        this.mail = mail;
+        this.password = password;
         this.noEtudiant = noEtudiant;
         this.inscrit = inscrit;
         this.formation = formation;
@@ -35,6 +49,38 @@ public class Etudiant extends Utilisateur implements Serializable { ;
         this.competences = competences;
         this.cv = cv;
         this.lm = lm;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNoEtudiant() {

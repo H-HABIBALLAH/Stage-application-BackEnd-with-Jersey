@@ -32,6 +32,13 @@ public class EtudiantService {
     }
 
     @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getEtudiantById(@PathParam("id") Long id) throws SQLException {
+        return etudiantDaoImpl.getById(id);
+    }
+
+    @GET
     @Path("/competences/{competences}")
     @Produces(MediaType.APPLICATION_JSON)
     public String getAllEtudiant(@PathParam("competences") String competences) throws SQLException {

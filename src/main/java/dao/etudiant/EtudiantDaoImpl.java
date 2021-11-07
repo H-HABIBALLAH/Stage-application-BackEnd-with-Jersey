@@ -1,6 +1,7 @@
 package dao.etudiant;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import dao.DBConnection;
 import entities.Etudiant;
 
@@ -11,7 +12,11 @@ import java.util.List;
 public class EtudiantDaoImpl implements EtudiantDao{
 
     Connection conn = DBConnection.createNewDBconnection();
-    Gson gson = new Gson();
+
+    Gson gson = new GsonBuilder()
+            .setPrettyPrinting()
+            .serializeNulls()
+            .create();
 
     public String getAll() throws SQLException {
         List<Etudiant> studentsList = new ArrayList<>();
@@ -28,7 +33,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String competences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            Etudiant student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
+            Etudiant student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,new byte[1],new byte[2]);
             studentsList.add(student);
         }
 
@@ -51,8 +56,9 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String competences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
+            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,new byte[1],new byte[2]);
         }
+        System.out.println(gson.toJson(student));
         return gson.toJson(student);
     }
 
@@ -67,17 +73,20 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String nom = result.getString("nom");
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
+            String password = result.getString("password");
+            String noEtudiant = result.getString("no_etudiant");
+            Boolean inscrit = result.getBoolean("inscrit");
             String formation = result.getString("formation");
             String linkedInLink = result.getString("linked_In_Link");
             String description = result.getString("description");
             String studentCompetences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,studentCompetences,cv,lm);
+            student = new Etudiant(nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,new byte[1],new byte[2]);
             studentList.add(student);
         }
 
-        return gson.toJson(student);
+        return gson.toJson(studentList);
     }
 
     public void save(Etudiant etudiant) throws SQLException {
