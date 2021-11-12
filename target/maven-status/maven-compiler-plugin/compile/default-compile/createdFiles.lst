@@ -1,10 +1,12 @@
 dao\etudiant\EtudiantDao.class
 util\EmailSender.class
+util\MD5Hash.class
 entities\Entreprise.class
 entities\Offre.class
 dao\fichier\FichierDaoImpl.class
 service\EtudiantService.class
 service\NotifyingService$1.class
+service\Login.class
 service\OffreService.class
 service\NotifyingService.class
 entities\Etudiant.class

@@ -10,11 +10,13 @@ import entities.Fichier;
 import org.apache.commons.lang3.ArrayUtils;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import util.MD5Hash;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,12 +64,13 @@ public class EtudiantService {
                                 @FormDataParam("cv") InputStream cvInputStream,
                                 @FormDataParam("cv") FormDataContentDisposition cvMetaData,
                                 @FormDataParam("lm") InputStream lmInputStream,
-                                @FormDataParam("lm") FormDataContentDisposition lmMetaData) throws SQLException, IOException {
+                                @FormDataParam("lm") FormDataContentDisposition lmMetaData) throws SQLException, IOException, NoSuchAlgorithmException {
         Etudiant newStudent= new Etudiant(nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedIn,description,competences,null,null);
         int read = 0;
         Byte[] byteArray;
         byte[] primitiveBytArray;
         List<Byte> byteList = new ArrayList<>();
+        String passwordHashed = null;
 
         while ((read = cvInputStream.read()) != -1) {
             byteList.add((byte) read);
@@ -86,6 +89,10 @@ public class EtudiantService {
         byteArray = new Byte[byteList.size()];
         primitiveBytArray = ArrayUtils.toPrimitive(byteList.toArray(byteArray));
         newStudent.setLm(primitiveBytArray);
+
+        passwordHashed = MD5Hash.hash(password);
+
+        newStudent.setPassword(passwordHashed);
 
         etudiantDaoImpl.save(new Etudiant(newStudent.getNom(), newStudent.getPrenom(), newStudent.getMail(), newStudent.getPassword(),newStudent.getNoEtudiant(), newStudent.getInscrit(), newStudent.getFormation(), newStudent.getLinkedInLink(), newStudent.getDescription(), newStudent.getCompetences(), newStudent.getCv(), newStudent.getLm()));
         return gson.toJson(newStudent);

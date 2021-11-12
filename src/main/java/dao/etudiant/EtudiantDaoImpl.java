@@ -90,6 +90,9 @@ public class EtudiantDaoImpl implements EtudiantDao{
     }
 
     public void save(Etudiant etudiant) throws SQLException {
+
+
+
         PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO etudiant (nom,prenom,mail,password,no_etudiant,inscrit,formation,linked_In_link,description,competences,cv,lm) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 
         preparedStatement.setString(1,etudiant.getNom());
@@ -106,5 +109,32 @@ public class EtudiantDaoImpl implements EtudiantDao{
         preparedStatement.setBytes(12, etudiant.getLm());
 
         preparedStatement.executeUpdate();
+    }
+
+    @Override
+    public String getByEmail(String email) throws SQLException {
+        Etudiant etudiant = null;
+
+        PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM ETUDIANT WHERE mail LIKE ?");
+        preparedStatement.setString(1,email);
+        ResultSet result = preparedStatement.executeQuery();
+
+        if(result.next()){
+            String nom = result.getString("nom");
+            String prenom = result.getString("prenom");
+            String mail = result.getString("mail");
+            String password = result.getString("password");
+            String noEtudiant = result.getString("no_etudiant");
+            Boolean inscrit = result.getBoolean("inscrit");
+            String formation = result.getString("formation");
+            String linkedInLink = result.getString("linked_In_Link");
+            String description = result.getString("description");
+            String studentCompetences = result.getString("competences");
+            byte[] cv = result.getBytes("cv");
+            byte[] lm = result.getBytes("lm");
+            etudiant = new Etudiant(nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,new byte[1],new byte[2]);
+        }
+
+        return gson.toJson(etudiant);
     }
 }

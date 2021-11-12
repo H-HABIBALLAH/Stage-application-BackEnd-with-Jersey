@@ -13,4 +13,6 @@ public interface EtudiantDao {
     public String getByCompetences(String competences) throws SQLException;
 
     public void save(Etudiant etudiant) throws SQLException;
+
+    public String getByEmail(String email) throws SQLException;
 }
