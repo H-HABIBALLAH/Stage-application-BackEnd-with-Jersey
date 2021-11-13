@@ -3,7 +3,6 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     <display-name>hanbo-jersey-sample</display-name>
-
     <servlet>
         <servlet-name>jersey-servlet</servlet-name>
         <servlet-class>
@@ -27,4 +26,24 @@
         <servlet-name>jersey-servlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>cross-origin</filter-name>
+        <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
+        <init-param>
+            <param-name>allowedOrigins</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowedMethods</param-name>
+            <param-value>GET,POST,HEAD</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowedHeaders</param-name>
+            <param-value>X-Requested-With,Content-Type,Accept,Origin</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>cross-origin</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
