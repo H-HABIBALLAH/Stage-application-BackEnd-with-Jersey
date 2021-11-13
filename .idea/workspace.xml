@@ -6,25 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96b692aa-1f45-44c8-ba98-6f033fb37bcc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fichier/FichierDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/fileTest/fileTestDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/fichier/FichierDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/fichier/fichierDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/fileTest/fileTestDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Administrateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Administrateur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Entreprise.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Fichier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/FileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Utilisateur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/EtudiantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/EtudiantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FileService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/FiletTestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/OffreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/OffreService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stageapp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/stageapp.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../POO/préparation exam" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -71,6 +53,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage" />
       <recent name="C:\Users\admin\Desktop\Desktop\ENSIBS\S7\AppStage\src\main\java" />
     </key>
   </component>
@@ -106,7 +89,7 @@
       <workItem from="1636707242267" duration="7977000" />
       <workItem from="1636753200119" duration="2085000" />
       <workItem from="1636789132153" duration="2767000" />
-      <workItem from="1636819199162" duration="1159000" />
+      <workItem from="1636819199162" duration="3620000" />
     </task>
     <servers />
   </component>

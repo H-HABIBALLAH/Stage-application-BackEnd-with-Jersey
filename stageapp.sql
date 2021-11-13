@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2021 at 10:58 AM
+-- Generation Time: Nov 13, 2021 at 09:22 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `stageapp_importTest`
+-- Database: `stageapp`
 --
 
 -- --------------------------------------------------------
@@ -41,9 +41,7 @@ CREATE TABLE `administrateur` (
 --
 
 INSERT INTO `administrateur` (`id`, `mail`, `nom`, `password`, `prenom`) VALUES
-(1, 'Mr', 'Loic', 'Loic1234', 'Loic@ensibs.fr'),
-(2, 'Sadou@ensibs.fr', 'Mr', 'abcde', 'Sadou'),
-(3, 'Sadou@ensibs.fr', 'salah', 'abcde', 'Sadou');
+(2, 'Sadou@ensibs.fr', 'Mr', 'abcde', 'Sadou');
 
 -- --------------------------------------------------------
 
@@ -62,36 +60,17 @@ CREATE TABLE `etudiant` (
   `formation` varchar(255) DEFAULT NULL,
   `inscrit` bit(1) DEFAULT NULL,
   `linked_in_link` varchar(255) DEFAULT NULL,
-  `no_etudiant` varchar(255) DEFAULT NULL
+  `no_etudiant` varchar(255) DEFAULT NULL,
+  `cv` longblob NOT NULL,
+  `lm` longblob NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `etudiant`
 --
 
-INSERT INTO `etudiant` (`id`, `mail`, `nom`, `password`, `prenom`, `competences`, `description`, `formation`, `inscrit`, `linked_in_link`, `no_etudiant`) VALUES
-(1, NULL, NULL, NULL, NULL, 'Java - C++', 'Je suis rigoureux', 'CyberLog', b'1', 'www.LinkedIn', 'e3213');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `fichier`
---
-
-CREATE TABLE `fichier` (
-  `id` bigint(20) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `data` blob NOT NULL,
-  `etudiant_id` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `fichier`
---
-
-INSERT INTO `fichier` (`id`, `title`, `type`, `data`, `etudiant_id`) VALUES
-(1, 'fichier1', 'CV', '', NULL);
+INSERT INTO `etudiant` (`id`, `mail`, `nom`, `password`, `prenom`, `competences`, `description`, `formation`, `inscrit`, `linked_in_link`, `no_etudiant`, `cv`, `lm`) VALUES
+(6, 'hamza1habiballah@gmail.com', 'HABIB ALLAH', '28936322a5eb164c9ced5a0166f93f15', 'Hamza', '', 'Rigoureux', 'Cyberlog', b'1', 'www.linkedin.com/myProfile', 'e2163456', '', '');
 
 -- --------------------------------------------------------
 
@@ -105,9 +84,18 @@ CREATE TABLE `offre` (
   `confirme` bit(1) DEFAULT NULL,
   `contenu` varchar(255) DEFAULT NULL,
   `titre` varchar(255) DEFAULT NULL,
-  `admin_id` bigint(20) DEFAULT NULL,
   `entrepriseName` varchar(20) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `offre`
+--
+
+INSERT INTO `offre` (`id`, `competences`, `confirme`, `contenu`, `titre`, `entrepriseName`) VALUES
+(1, 'java', b'1', 'de4mois', 'stage', 'capgemini'),
+(2, 'pentest', b'0', 'de3mois', 'stage', 'orange'),
+(3, 'jee', b'1', 'de4mois', 'stage2', 'capgemini'),
+(4, 'pentest', b'0', 'de3mois', 'stage', 'orange');
 
 --
 -- Indexes for dumped tables
@@ -126,18 +114,10 @@ ALTER TABLE `etudiant`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `fichier`
---
-ALTER TABLE `fichier`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FKhyn7yowblj7qf44x6sjyg6kii` (`etudiant_id`);
-
---
 -- Indexes for table `offre`
 --
 ALTER TABLE `offre`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK7er9r0hnjgqlwsavi2820cye5` (`admin_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -147,25 +127,19 @@ ALTER TABLE `offre`
 -- AUTO_INCREMENT for table `administrateur`
 --
 ALTER TABLE `administrateur`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `etudiant`
 --
 ALTER TABLE `etudiant`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `fichier`
---
-ALTER TABLE `fichier`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `offre`
 --
 ALTER TABLE `offre`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
