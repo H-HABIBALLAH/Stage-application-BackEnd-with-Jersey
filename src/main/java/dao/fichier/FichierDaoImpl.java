@@ -4,8 +4,6 @@ import com.google.gson.Gson;
 import dao.DBConnection;
 import dao.etudiant.EtudiantDao;
 import dao.etudiant.EtudiantDaoImpl;
-import entities.Etudiant;
-import entities.Fichier;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,5 +1,6 @@
 package dao.administrateur;
 
+import com.google.gson.Gson;
 import dao.DBConnection;
 import entities.Administrateur;
 
@@ -8,7 +9,9 @@ import java.sql.*;
 public class AdministrateurDaomImpl implements AdministrateurDao {
 
 
-    public Administrateur getAdmin() {
+    Gson gson = new Gson();
+
+    public String getAdmin() {
         Connection connection;
         Administrateur admin = null;
         Statement statement;
@@ -29,10 +32,10 @@ public class AdministrateurDaomImpl implements AdministrateurDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return admin;
+        return gson.toJson(admin);
     }
 
-    public Administrateur getAdminById(Long id) {
+    public String getAdminById(Long id) {
         Connection connection;
         Administrateur admin = null;
         ResultSet resultat;
@@ -54,10 +57,11 @@ public class AdministrateurDaomImpl implements AdministrateurDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return admin;
+        return gson.toJson(admin);
+
     }
 
-    public void saveAdmin(Administrateur admin) {
+    public String saveAdmin(Administrateur admin) {
         Connection connection;
         PreparedStatement preparedStatement;
 
@@ -75,5 +79,6 @@ public class AdministrateurDaomImpl implements AdministrateurDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return gson.toJson(admin);
     }
 }

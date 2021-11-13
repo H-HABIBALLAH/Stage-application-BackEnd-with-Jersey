@@ -3,6 +3,7 @@ util\EmailSender.class
 util\MD5Hash.class
 entities\Entreprise.class
 entities\Offre.class
+filters\LoginAdminFilter.class
 dao\fichier\FichierDaoImpl.class
 service\EtudiantService.class
 service\NotifyingService$1.class

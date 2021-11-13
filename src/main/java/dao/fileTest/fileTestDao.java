@@ -2,7 +2,6 @@ package dao.fileTest;
 
 import com.google.gson.Gson;
 import dao.DBConnection;
-import entities.FileTest;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

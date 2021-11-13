@@ -91,4 +91,23 @@ public class OffreDaoImpl implements OffreDao{
         preparedStatement.executeUpdate();
         return this.getById(id);
     }
+
+    public String getOffresConfirmes() throws SQLException {
+        List<Offre> offresList = new ArrayList<>();
+        PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM offre WHERE confirme = ?");
+        preparedStatement.setBoolean(1,true);
+        ResultSet result = preparedStatement.executeQuery();
+
+        while(result.next()) {
+            String titre = result.getString("titre");
+            Boolean confirme = result.getBoolean("confirme");
+            String contenu = result.getString("contenu");
+            String competences = result.getString("competences");
+            String entrepriseName = result.getString("entrepriseName");
+            Offre offre = new Offre(titre, confirme, contenu, competences, entrepriseName);
+            offresList.add(offre);
+        }
+
+        return gson.toJson(offresList);
+    }
 }

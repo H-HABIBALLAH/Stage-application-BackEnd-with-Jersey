@@ -1,9 +1,6 @@
 package dao.fichier;
 
-import entities.Fichier;
-
 import java.sql.SQLException;
-import java.util.List;
 
 public interface FichierDao {
     public String getAll() throws SQLException;
