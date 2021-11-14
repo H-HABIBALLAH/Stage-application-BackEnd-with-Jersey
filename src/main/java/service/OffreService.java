@@ -42,6 +42,13 @@ public class OffreService {
         }
     }
 
+    @GET
+    @Path("")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllOffre() throws SQLException{
+            return Response.status(Response.Status.OK).entity(offreDaoImpl.getOffresConfirmes()).build();
+    }
+
     @PUT
     @Path("/confirm/{id}")
     @Produces(MediaType.APPLICATION_JSON)
