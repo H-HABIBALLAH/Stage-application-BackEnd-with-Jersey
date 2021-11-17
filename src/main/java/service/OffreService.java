@@ -8,6 +8,7 @@ import dao.offre.OffreDaoImpl;
 import entities.Administrateur;
 import entities.Offre;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import util.MD5Hash;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -28,13 +29,13 @@ public class OffreService {
     @Path("/all")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllOffre(@FormDataParam("username") String username,
-                              @FormDataParam("password") String password) throws SQLException, NoSuchAlgorithmException {
+    public Response getAllOffre(@FormDataParam("email") String email,
+                                @FormDataParam("password") String password) throws SQLException, NoSuchAlgorithmException {
         administrateur = gson.fromJson(adao.getAdmin(), Administrateur.class);
 
-//        String passwordHashed = MD5Hash.hash(password);
+        String passwordHashed = MD5Hash.hash(password);
 
-        if (administrateur == null || !administrateur.getPassword().equals(password) || !administrateur.getMail().equals(username))
+        if (administrateur == null || !administrateur.getPassword().equals(passwordHashed) || !administrateur.getMail().equals(email))
             return Response.status(Response.Status.UNAUTHORIZED).entity("Veuillez vérifier votre email et password").build();
 
         else {

@@ -4,7 +4,6 @@ dao\administrateur\AdministrateurDaomImpl.class
 dao\etudiant\EtudiantDaoImpl.class
 util\MD5Hash.class
 entities\Offre.class
-filters\LoginAdminFilter.class
 service\EtudiantService.class
 service\NotifyingService$1.class
 entities\Administrateur.class
