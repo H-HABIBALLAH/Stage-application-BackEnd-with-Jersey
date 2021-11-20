@@ -53,8 +53,6 @@ public class EtudiantService {
                                 @FormDataParam("mail") String mail,
                                 @FormDataParam("password") String password,
                                 @FormDataParam("noEtudiant") String noEtudiant,
-                                @FormDataParam("inscrit") boolean inscrit,
-                                @FormDataParam("formation") String formation,
                                 @FormDataParam("LinkedIn") String linkedIn,
                                 @FormDataParam("description") String description,
                                 @FormDataParam("competences") String competences,
@@ -62,7 +60,7 @@ public class EtudiantService {
                                 @FormDataParam("cv") FormDataContentDisposition cvMetaData,
                                 @FormDataParam("lm") InputStream lmInputStream,
                                 @FormDataParam("lm") FormDataContentDisposition lmMetaData) throws SQLException, IOException, NoSuchAlgorithmException {
-        Etudiant newStudent= new Etudiant(nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedIn,description,competences,null,null);
+        Etudiant newStudent= new Etudiant(nom,prenom,mail,password,noEtudiant,null,null,linkedIn,description,competences,null,null);
         int read = 0;
         Byte[] byteArray;
         byte[] primitiveBytArray;

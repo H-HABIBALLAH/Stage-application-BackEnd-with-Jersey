@@ -100,8 +100,8 @@ public class EtudiantDaoImpl implements EtudiantDao{
         preparedStatement.setString(3,etudiant.getMail());
         preparedStatement.setString(4,etudiant.getPassword());
         preparedStatement.setString(5,etudiant.getNoEtudiant());
-        preparedStatement.setBoolean(6,etudiant.getInscrit());
-        preparedStatement.setString(7,etudiant.getFormation());
+        preparedStatement.setBoolean(6,true);
+        preparedStatement.setString(7,null);
         preparedStatement.setString(8,etudiant.getLinkedInLink());
         preparedStatement.setString(9,etudiant.getDescription());
         preparedStatement.setString(10,etudiant.getCompetences());
