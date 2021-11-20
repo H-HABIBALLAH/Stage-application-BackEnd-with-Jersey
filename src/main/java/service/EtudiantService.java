@@ -13,6 +13,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.*;
+import java.net.URI;
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -47,8 +48,7 @@ public class EtudiantService {
     @POST
     @Path("/save")
     @Consumes({MediaType.APPLICATION_JSON,MediaType.MULTIPART_FORM_DATA})
-    @Produces({MediaType.APPLICATION_JSON,MediaType.MULTIPART_FORM_DATA})
-    public String saveStudent(@FormDataParam("nom") String nom,
+    public Response saveStudent(@FormDataParam("nom") String nom,
                                 @FormDataParam("prenom") String prenom,
                                 @FormDataParam("mail") String mail,
                                 @FormDataParam("password") String password,
@@ -60,7 +60,7 @@ public class EtudiantService {
                                 @FormDataParam("cv") FormDataContentDisposition cvMetaData,
                                 @FormDataParam("lm") InputStream lmInputStream,
                                 @FormDataParam("lm") FormDataContentDisposition lmMetaData) throws SQLException, IOException, NoSuchAlgorithmException {
-        Etudiant newStudent= new Etudiant(nom,prenom,mail,password,noEtudiant,null,null,linkedIn,description,competences,null,null);
+        Etudiant newStudent= new Etudiant(null,nom,prenom,mail,password,noEtudiant,null,null,linkedIn,description,competences,null,null);
         int read = 0;
         Byte[] byteArray;
         byte[] primitiveBytArray;
@@ -89,8 +89,13 @@ public class EtudiantService {
 
         newStudent.setPassword(passwordHashed);
 
-        etudiantDaoImpl.save(new Etudiant(newStudent.getNom(), newStudent.getPrenom(), newStudent.getMail(), newStudent.getPassword(),newStudent.getNoEtudiant(), newStudent.getInscrit(), newStudent.getFormation(), newStudent.getLinkedInLink(), newStudent.getDescription(), newStudent.getCompetences(), newStudent.getCv(), newStudent.getLm()));
-        return gson.toJson(newStudent);
+        etudiantDaoImpl.save(newStudent);
+
+        if(etudiantDaoImpl.getByEmail(newStudent.getMail()) == null)
+            return Response.status(Response.Status.REQUEST_TIMEOUT).build();
+
+        return Response.seeOther(URI.create("http://localhost:8080/etudiants")).build();
+
     }
 
     @GET

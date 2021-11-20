@@ -24,6 +24,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
         ResultSet result = statement.executeQuery("SELECT * FROM ETUDIANT");
 
         while(result.next()){
+            Long id = result.getLong("id");
             String nom = result.getString("nom");
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
@@ -33,7 +34,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String competences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            Etudiant student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
+            Etudiant student = new Etudiant(id,nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
             studentsList.add(student);
         }
 
@@ -56,7 +57,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String competences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            student = new Etudiant(nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
+            student = new Etudiant(id,nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
         }
         System.out.println(gson.toJson(student));
         return gson.toJson(student);
@@ -70,6 +71,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
         List<Etudiant> studentList = new ArrayList<>();
 
         while(result.next()){
+            Long id = result.getLong("id");
             String nom = result.getString("nom");
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
@@ -82,7 +84,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String studentCompetences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            student = new Etudiant(nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,cv,lm);
+            student = new Etudiant(id,nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,cv,lm);
             studentList.add(student);
         }
 
@@ -120,6 +122,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
         ResultSet result = preparedStatement.executeQuery();
 
         if(result.next()){
+            Long id = result.getLong("id");
             String nom = result.getString("nom");
             String prenom = result.getString("prenom");
             String mail = result.getString("mail");
@@ -132,7 +135,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String studentCompetences = result.getString("competences");
             byte[] cv = result.getBytes("cv");
             byte[] lm = result.getBytes("lm");
-            etudiant = new Etudiant(nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,cv,lm);
+            etudiant = new Etudiant(id,nom,prenom,mail,password,noEtudiant,inscrit,formation,linkedInLink,description,studentCompetences,cv,lm);
         }
 
         return gson.toJson(etudiant);

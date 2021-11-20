@@ -36,7 +36,8 @@ public class Etudiant implements Serializable {
         this.lm = null;
     }
 
-    public Etudiant(String nom, String prenom, String mail, String password, String noEtudiant, Boolean inscrit, String formation, String linkedInLink, String description, String competences, byte[] cv, byte[] lm) {
+    public Etudiant(Long id,String nom, String prenom, String mail, String password, String noEtudiant, Boolean inscrit, String formation, String linkedInLink, String description, String competences, byte[] cv, byte[] lm) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.mail = mail;
