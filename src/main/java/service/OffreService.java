@@ -79,7 +79,7 @@ public class OffreService {
     @Produces({MediaType.APPLICATION_JSON})
     public Offre saveOffre(final Offre newOffre) throws SQLException {
         System.out.println("called");
-        offreDaoImpl.save(new Offre(newOffre.getTitre(), newOffre.getConfirme(), newOffre.getContenu(), newOffre.getCompetences(), newOffre.getEntrepriseName()));
+        offreDaoImpl.save(new Offre(newOffre.getTitre(), newOffre.getConfirme(), newOffre.getContenu(), newOffre.getCompetences(), newOffre.getEntrepriseName(),newOffre.getVille(),newOffre.getDuree()));
         return newOffre;
     }
 }

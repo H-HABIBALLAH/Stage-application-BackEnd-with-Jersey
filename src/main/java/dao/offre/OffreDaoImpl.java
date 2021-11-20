@@ -24,7 +24,9 @@ public class OffreDaoImpl implements OffreDao{
             String contenu = result.getString("contenu");
             String competences = result.getString("competences");
             String entrepriseName = result.getString("entrepriseName");
-            Offre offre = new Offre(titre,confirme,contenu,competences,entrepriseName);
+            String ville = result.getString("ville");
+            String duree = result.getString("duree");
+            Offre offre = new Offre(titre,confirme,contenu,competences,entrepriseName,ville,duree);
             offresList.add(offre);
         }
 
@@ -43,7 +45,9 @@ public class OffreDaoImpl implements OffreDao{
             String contenu = result.getString("contenu");
             String competences = result.getString("competences");
             String entrepriseName = result.getString("entrepriseName");
-            offre = new Offre(titre,confirme,contenu,competences,entrepriseName);
+            String ville = result.getString("ville");
+            String duree = result.getString("duree");
+            offre = new Offre(titre,confirme,contenu,competences,entrepriseName,ville,duree);
         }
 
         return gson.toJson(offre);
@@ -60,7 +64,9 @@ public class OffreDaoImpl implements OffreDao{
             String contenu = result.getString("contenu");
             String competencesInOffre = result.getString("competences");
             String entrepriseName = result.getString("entrepriseName");
-            Offre offre = new Offre(titre,confirme,contenu,competencesInOffre,entrepriseName);
+            String ville = result.getString("ville");
+            String duree = result.getString("duree");
+            Offre offre = new Offre(titre,confirme,contenu,competencesInOffre,entrepriseName,ville,duree);
             offresList.add(offre);
         }
 
@@ -104,7 +110,9 @@ public class OffreDaoImpl implements OffreDao{
             String contenu = result.getString("contenu");
             String competences = result.getString("competences");
             String entrepriseName = result.getString("entrepriseName");
-            Offre offre = new Offre(titre, confirme, contenu, competences, entrepriseName);
+            String ville = result.getString("ville");
+            String duree = result.getString("duree");
+            Offre offre = new Offre(titre,confirme,contenu,competences,entrepriseName,ville,duree);
             offresList.add(offre);
         }
 

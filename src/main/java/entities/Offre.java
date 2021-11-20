@@ -10,6 +10,8 @@ public class Offre implements Serializable {
      private String contenu;
      private String competences;
      private String entrepriseName;
+     private String ville;
+     private String duree;
      private Administrateur admin;
 
     public Offre() {
@@ -18,14 +20,18 @@ public class Offre implements Serializable {
         this.contenu = null;
         this.competences = null;
         this.entrepriseName = null;
+        this.ville = null;
+        this.duree = null;
     }
 
-    public Offre(String titre, Boolean confirme, String contenu, String competences, String entrepriseName) {
+    public Offre(String titre, Boolean confirme, String contenu, String competences, String entrepriseName, String ville, String duree) {
         this.titre = titre;
         this.confirme = confirme;
         this.contenu = contenu;
         this.competences = competences;
         this.entrepriseName = entrepriseName;
+        this.ville = ville;
+        this.duree = duree;
     }
 
     public void setEntrepriseName(String entrepriseName) {
@@ -82,5 +88,21 @@ public class Offre implements Serializable {
 
     public void setAdmin(Administrateur admin) {
         this.admin = admin;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public String getDuree() {
+        return duree;
+    }
+
+    public void setDuree(String duree) {
+        this.duree = duree;
     }
 }
