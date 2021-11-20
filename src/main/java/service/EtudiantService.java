@@ -94,7 +94,7 @@ public class EtudiantService {
         if(etudiantDaoImpl.getByEmail(newStudent.getMail()) == null)
             return Response.status(Response.Status.REQUEST_TIMEOUT).build();
 
-        return Response.seeOther(URI.create("http://localhost:8080/etudiants")).build();
+        return Response.seeOther(URI.create("http://localhost:3000/etudiants")).build();
 
     }
 

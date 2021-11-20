@@ -32,9 +32,9 @@ public class EtudiantDaoImpl implements EtudiantDao{
             String linkedInLink = result.getString("linked_in_Link");
             String description = result.getString("description");
             String competences = result.getString("competences");
-            byte[] cv = result.getBytes("cv");
-            byte[] lm = result.getBytes("lm");
-            Etudiant student = new Etudiant(id,nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
+//            byte[] cv = result.getBytes("cv");
+//            byte[] lm = result.getBytes("lm");
+            Etudiant student = new Etudiant(id,nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,null,null);
             studentsList.add(student);
         }
 
