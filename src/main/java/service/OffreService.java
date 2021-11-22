@@ -25,7 +25,7 @@ public class OffreService {
     Administrateur administrateur = null;
     Gson gson = new Gson();
 
-    @GET
+    @POST
     @Path("/all")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)

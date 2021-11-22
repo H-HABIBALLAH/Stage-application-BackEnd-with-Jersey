@@ -59,7 +59,7 @@ public class EtudiantDaoImpl implements EtudiantDao{
             byte[] lm = result.getBytes("lm");
             student = new Etudiant(id,nom,prenom,mail,null,null,null,formation,linkedInLink,description,competences,cv,lm);
         }
-        System.out.println(gson.toJson(student));
+//        System.out.println(gson.toJson(student));
         return gson.toJson(student);
     }
 
